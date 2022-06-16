@@ -11,20 +11,19 @@ and height of the triangle and display the area. If
 they type in anything else, it should give them a
 suitable error message.
 """
-import math
 menuselection = 0
 print(" 1) square")
 print(" 2) triangle")
 print()
 menuselection = int(input("enter a number: "))
 if menuselection == 1:
-	side = int(input("enter a side: "))
-	area = side*side
-	print("the area is ", area)
+    side = int(input("enter a side: "))
+    area = side*side
+    print("the area is ", area)
 elif menuselection == 2:
-	base = int(input("enter a base: "))
-	height = int(input("enter a height: "))
-	area = base*height
-	print("the area is ", area)
+    base = int(input("enter a base: "))
+    height = int(input("enter a height: "))
+    area = base*height
+    print("the area is ", area)
 else:
-	print("wrong option")
+    print("wrong option")

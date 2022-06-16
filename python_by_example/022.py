@@ -7,3 +7,4 @@ name = input("Enter your first name: ")
 surname = input("Enter your surname: ")
 all = name + " " + surname
 print(all.title())
+id()

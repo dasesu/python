@@ -12,8 +12,8 @@ number1 = int(input("enter a number"))
 number2 = int(input("enter another number"))
 
 if number1 < number2:
-   print(number2)
+      print(number2)
    print(number1)
 else:
    print(number1)
-   print(number2)
+            print(number2)
