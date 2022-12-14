@@ -5,5 +5,4 @@
 
 name = input("Enter your first name: ")
 surname = input("Enter your surname: ")
-all = name + surname
-print(len(all))
+print(name,surname, len(name+surname))
