@@ -55,26 +55,38 @@ Python es Case sensitive.
 for loop
 se parece mucho al for en C++, podria leerse como va a comenzar en 1 y va a continuar mientras no el valor sea distinto de 10, la cual es la condicion de parada
 
-```
+```py
 for i in range(1,10):
     print(i) # print 1 2 3 4 5 6 7 8 9, no llega a 10
 ```
 El equivalente en while podria verse asi
-```
+```py
 x = 1
 while x < 10:
     print(x)
     x += 1
 ```
 
-Tiene la opcion de indicar de cuanto en cuanto iterar, nuevamente se parece a C++ en esto, que seria como agregar en el ultimo campo, un i+2
+Python admite el uso de else para una condicion en ciclos
+```py
+x = 1
+while x < 10:
+    print(x)
+    x += 1
+else:
+    print("no es menor que 10") ''' solo se cumple la primera vez que no cumpla la condicion '''
 ```
+
+
+Tiene la opcion de indicar de cuanto en cuanto iterar, nuevamente se parece a C++ en esto, que seria como agregar en el ultimo campo, un i+2
+```py
 for i in range(1,10,2):
     print(i)
 ```
 
 Recorre el string word
-```
+```py
+word = "someword"
 for i in word:
     print(i)
 ```
@@ -88,27 +100,28 @@ print(num)
 ```
 
 Selects a random whole number between 0 and 9 (inclusive).
-```
+```py
 num = random.randint(0,9)
 ```
 
 Picks a random number between the numbers 0 and 100 (inclusive) in steps of five
-```
+```py
 num = random.randrange(0,100,5)
 ```
 
 random from options
-```
+```py
 colour = random.choice([“red”,“black”,“green”])
 ```
 
 Turtle:
+===
 importa la libreria turtle para su uso
-```
+```py
 import turtle
 ```
 Defines the window as being called “scr”
-```
+```py
 scr = turtle.Screen()
 ```
 
@@ -157,7 +170,10 @@ turtle.color(“black”,“red”)
 When the user clicks on the turtle window
 turtle.exitonclick()
 
-'''''''''''''''''''''''''''
+
+Variable global
+===
+
 El uso de global funciona como crear una variable static, cuando es local la puede hacer global
 ```py
 a = 0
@@ -260,3 +276,13 @@ for i in texto[::2]:
     print(i) #P,t,o
 ```
 
+Tupla en python, las tuplas funcionan como arreglos o listas que no pueden ser modificadas
+
+```py
+fruit_tuple = (“apple”,“banana”,“strawberry”,“orange”)
+```
+
+Devuelve el valor de la posicion de strawberry
+```py
+print(fruit_tuple.index(“strawberry”))
+```

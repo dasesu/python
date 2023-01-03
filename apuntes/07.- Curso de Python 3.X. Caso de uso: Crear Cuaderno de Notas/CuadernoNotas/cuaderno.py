@@ -3,7 +3,7 @@ import datetime
 # Almacena todas las ids disponibles para las nuevas notas
 ultima_id = 0
 
-Class Nota:
+class Nota:
    '''Representa una nota en el cuaderno. Se compara con un String en las busquedas
    y las etiquetas para cada nota'''
    def __init__(self, memo, tags=''):
