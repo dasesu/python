@@ -1,5 +1,11 @@
-Notas muy rapidas o interesantes sobre python
+Notas rapidas o interesantes sobre python
 ===
+
+si quiero conocer la posicion en memoria de una variable uso ID
+```
+a=3
+id(a)
+```
 
 Python no usa punto y coma `;` para terminar una declaracion
 Pero se puede usar el punto y coma `;` para tener dos sentencias en la misma línea.
@@ -111,7 +117,7 @@ num = random.randrange(0,100,5)
 
 random from options
 ```py
-colour = random.choice([“red”,“black”,“green”])
+colour = random.choice(["red","black","green"])
 ```
 
 Turtle:
@@ -120,13 +126,13 @@ importa la libreria turtle para su uso
 ```py
 import turtle
 ```
-Defines the window as being called “scr”
+Defines the window as being called "scr"
 ```py
 scr = turtle.Screen()
 ```
 
 Sets the screen background colour to yellow
-scr.bgcolor(“yellow”)
+scr.bgcolor("yellow")
 
 Removes the pen from the page
 turtle.penup()
@@ -148,7 +154,7 @@ Moves the turtle forward 50 steps.
 turtle.forward(50)
 
 Changes the shape of the turtle to look like a turtle
-turtle.shape(“turtle”)
+turtle.shape("turtle")
 
 Hides the turtle so it is not showing on the screen.
 turtle.hideturtle()
@@ -165,7 +171,7 @@ Entered after the code that is drawing the shape to tell Python to stop filling 
 turtle.end_fill()
 
 Defines the colours filling in the shape. This example will make the shape have a black outline and a red fill. This needs to be entered before the  shape is drawn.
-turtle.color(“black”,“red”)
+turtle.color("black","red")
 
 When the user clicks on the turtle window
 turtle.exitonclick()
@@ -279,10 +285,62 @@ for i in texto[::2]:
 Tupla en python, las tuplas funcionan como arreglos o listas que no pueden ser modificadas
 
 ```py
-fruit_tuple = (“apple”,“banana”,“strawberry”,“orange”)
+fruit_tuple = ("apple","banana","strawberry","orange")
 ```
 
 Devuelve el valor de la posicion de strawberry
 ```py
-print(fruit_tuple.index(“strawberry”))
+print(fruit_tuple.index("strawberry"))
+```
+
+Devuelve el 3 elemento, 0, 1, 2 o el elemento con indice 2
+```py
+print(fruit_tuple[2])
+```
+
+Cra una lista en python, la lista es como un conjunto de variables que si pueden ser cambiados despues de su creacion, es similar a un array.
+```py
+names_list = ["John","Tim","Sam"]
+```
+Borra el elemento de indice 1 de la lista name_list
+```py
+del names_list[1]
+```
+
+```py
+names_list.append(input("Add a name: "))
+```
+
+Ordena la lista en orden alfabetico y la deja en ese nuevo orden
+```py
+names_list.sort()
+```
+
+Imprime la lista en orden alfabetico pero conservando la lista original
+```
+print(sorted(names_list))
+```
+
+Diccionarios
+Crea un diccionario. each item is assigned an index of your choosing
+```py
+colours = {1: "red",2: "blue",3: "green"}
+```
+```py
+x = [154,634,892,345,341,43]
+
+'''display data in positions 1, 2 and 3'''
+print(x[1:4])
+
+''' Inserts the number 420 into position 2 and pushes everything else along to make space '''
+x.insert(2,420)
+
+
+'''
+Deletes an item from the list. This is useful if you do not know the index of that item. If there is more than one instance of the data it will only delete the first instance.'''
+x.remove(892)
+
+''' Adds the number 993 to the end of the list. '''
+x.append(993)
+
 ```
