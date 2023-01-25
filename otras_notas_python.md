@@ -344,3 +344,33 @@ x.remove(892)
 x.append(993)
 
 ```
+
+Uso de Zip en python
+===
+si pasamos dos listas a zip como entrada, el resultado será una tupla donde cada elemento tendrá todos y cada uno de los elementos i-ésimos de las pasadas como entrada.
+```py
+a = [1, 2]
+b = ["Uno", "Dos"]
+c = zip(a, b)
+
+print(list(c))
+# [(1, 'Uno'), (2, 'Dos')]
+```
+
+No tienen porque ser unicamente dos listas, pueden ser mas pero deben respetarse las longitudes de todas, que deben coincidir, en caso de que no coincidan el la funcion zip truncara a la cantidad de elementos de la lista mas pequena
+```py
+numeros = [1, 2]
+espanol = ["Uno", "Dos"]
+ingles = ["One", "Two"]
+frances = ["Un", "Deux"]
+c = zip(numeros, espanol, ingles, frances)
+
+for n, e, i, f in zip(numeros, espanol, ingles, frances):
+    print(n, e, i, f)
+    
+# 1 Uno One Un
+# 2 Dos Two Deux
+```
+
+https://ellibrodepython.com/zip-python
+
