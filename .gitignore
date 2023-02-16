@@ -1,2 +1,6 @@
+# Ignore these files
 *.pdf
 *.mp4
+
+# but not these
+!Python\ by\ Example\ Learning\ to\ Program\ in\ 150\ Challenges.pdf
