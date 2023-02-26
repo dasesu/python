@@ -392,7 +392,8 @@ file.write("Spain\n")
 file.close()
 
 file = open("Countries.txt","r")
-print(file.read())
+print(file.read()) // imprime todo el archivo de sopeton
+print(file.readline()) // muestra solo una linea
 
 file = open("Countries.txt","a")
 file.write("France\n")
@@ -400,3 +401,54 @@ file.close()
 
 ```
 
+Recordando un poco acerca del uso de los iterables, python define ciertas clases uqe son iterables y otras no, por ejemplo un array es un iterable, una lista, un diccionario, un string son iterables. vimos que para conocer que si `lista` es un iterable podemos usar isinstance(lista, Iterable), y que podemos recorrer for usando la instruccion in, accediendo directamente al elemento
+```py
+lista = [5, 4, 9, 2]
+for elemento in lista:
+    print(elemento)
+# Salida 5, 4, 9, 2
+```
+
+Que el next nos permite movernos al siguiente elemento del iterable. no se mueve solo.
+```py
+libro = ['página1', 'página2', 'página3', 'página4']
+marcapaginas = iter(libro)
+print(next(marcapaginas))
+print(next(marcapaginas))
+print(next(marcapaginas))
+print(next(marcapaginas))
+
+# página1
+# página2
+# página3
+# página4
+```
+
+
+
+Ahora queremos ver como podemos hacer que nuestra propia clase  sea un iterable.
+por ejemplo:
+```py
+class MiClase:
+    pass
+```
+
+Para convertir MiClase en iterable debemos agregar el metodo dunder `__iter__()`
+```py
+class MiClase:
+    def __init__(self, items):
+        self.lista = items
+    def __iter__(self):
+        return iter(self.lista)
+```
+
+Ahora que nuestra clase ya es iterable, podemos hacer lo siguiente.
+```py
+miobjeto = MiClase([5, 4, 3])
+for item in miobjeto:
+    print(item)
+
+# Salida: 5, 4, 3
+```
+
+https://mathspp.com/blog/pydonts/dunder-methods 
