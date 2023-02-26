@@ -374,3 +374,29 @@ for n, e, i, f in zip(numeros, espanol, ingles, frances):
 
 https://ellibrodepython.com/zip-python
 
+
+Manejo de archivos en python
+===
+Puedo trabaar con archivos para escribir, leer o agregar informacion. si voy a escribir se crea un archivo vacio cada vez que es llamado. si es para leer se consume el archivo pero no se escribe en el y si se agrega se agrega al final del archivo.
+
+Los prefijos usados para esto son:
+w (write)
+r (read)
+a (append)
+
+```py
+file = open("Countries.txt","w")
+file.write("Italy\n")
+file.write("Germany\n")
+file.write("Spain\n")
+file.close()
+
+file = open("Countries.txt","r")
+print(file.read())
+
+file = open("Countries.txt","a")
+file.write("France\n")
+file.close()
+
+```
+
