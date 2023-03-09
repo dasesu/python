@@ -452,3 +452,5 @@ for item in miobjeto:
 ```
 
 https://mathspp.com/blog/pydonts/dunder-methods 
+
+
