@@ -454,3 +454,64 @@ for item in miobjeto:
 https://mathspp.com/blog/pydonts/dunder-methods 
 
 
+Tkinter
+====
+This line must go at the beginning of the program to import the Tkinter library.
+```py
+from tkinter import *
+```
+
+Creates a window that will act as the
+display, referred to as “window”, adds a title
+and defines the size of the window.
+```py
+window = Tk()
+window.title("Window Title")
+window.geometry("450x100")
+```
+Adds text to the screen displaying the message
+shown.
+
+```py
+label = Label(text = "Enter number:")
+```
+
+Creates a blank entry box. Entry boxes can be used by
+the user to input data or used to display output
+```py
+entry_box = Entry (text = 0)
+```
+
+Creates a message box which is used to display an
+output.
+```py
+output_box = Message(text = 0)
+```
+
+Specifies the background colour of the
+object
+```py
+output_box [“bg”] = "red"
+```
+
+Specifies the font colour of the object.
+```py
+output_box [“fg”] = "white"
+```
+
+Specifies the style of the box. This can be flat, raised, sunken, grooved and ridged
+```py
+output_box ["relief"] = "sunken"
+```
+
+Creates a drop-down list box
+which can only contain strings.
+```py
+list_box = Listbox()
+```
+
+Specifies the justification of the text in an entry box,
+but this does not work for message boxes.
+```py
+entry_box ["justify"] = "center"
+```
