@@ -515,3 +515,45 @@ but this does not work for message boxes.
 ```py
 entry_box ["justify"] = "center"
 ```
+
+Creates a button that will run the subprogram “click”
+```py
+button1 = Button(text = “Click here”, command = click)
+```
+
+Specifies the position in which the object will appear in the window. If the position is
+not specified the item will not appear in the window.
+```py
+label.place(x = 50, y = 20, width = 100, height = 25)
+```
+
+Deletes the contents of an entry or list box
+```py
+entry_box.delete(0, END)
+```
+
+Saves the contents of an entry box and stores it
+in a variable called num. This does not work
+with message boxes.
+```py
+num = entry_box.get()
+```
+
+Obtains the contents of a message box and
+stores it in a variable called answer. This does
+not work with an entry box.
+```py
+answer = output_txt[“text”]
+```
+
+Changes the content of a message box to
+display the value of the variable total.
+```py
+output_txt[“text”] = total
+```
+
+This must be at the end of the program to make
+sure it keeps working.
+```py
+window.mainloop()
+```
